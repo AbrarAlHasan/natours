@@ -1,0 +1,115 @@
+.btn{
+
+    &,
+    &:link, 
+    &:visited {
+
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 5rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+
+    //change for the <buton> elemnt
+    border: none;
+    cursor: pointer;
+
+    }
+
+    &:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active,
+    &:focus{
+
+    transform: translateY(-.1rem);
+    box-shadow: 0 .1rem .5rem rgba($color-black, 0.2);
+    }   
+
+    &--white{
+    background-color: $color-white;
+    color: $color-grey;  
+    font-weight: 600;  
+
+    &::after{
+        background-color: $color-white;
+    }
+    &:hover::after{
+    
+        transform: scalex(1.2) scaley(1.5);
+        opacity: 0;
+    
+    }
+    }
+
+    &--green{
+    background-color: #099e3b;
+    color: white;  
+    font-weight: 600;  
+
+    &::after{
+        background-color: #099e3b;
+    }
+    &:hover::after{
+    
+        transform: scalex(1.2) scaley(1.5);
+        opacity: 0;
+    
+    }
+}
+
+&::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+&--animated {
+    animation: moveInBottom .5s ease-out .7s ;
+    animation-fill-mode: backwards;
+
+}
+
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 5px;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: white;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.151);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.151);
+        transform: translateY(0);
+    }
+
+
+}
+
+//composition section
+
